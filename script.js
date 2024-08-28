@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dif = document.querySelector("#dif")
     const copyAllButton = document.getElementById("copyAllButton")
     const pdfButton = document.getElementById("generatePDF")
+    const userName = localStorage.getItem("userName")
 
     let desc = []
     let val = []
@@ -17,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const valor = parseFloat(form.inValor.value.replace(',', '.'))
         const vt = parseFloat(form.invt.value)
 
-        if (isNaN(valor)) {
-            alert("Por favor, insira um valor numérico válido.")
+        if (isNaN(valor) || isNaN(vt)) {
+            alert("Por favor, insira valores numéricos válidos.")
             return
         }
 
@@ -40,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
         total.innerText = resume
         percentual.innerText = `Comprometimento da Renda: ${percentualDesconto}%`
         dif.innerText = `Saldo Atual: R$ ${dife.toFixed(2)}`
+        if (desc.length > 0) {
+            exibir.style.display = 'block'
+        }
 
         form.innome.value = ""
         form.inValor.value = ""
@@ -70,9 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Adiciona o título do documento
         doc.setFontSize(18)
-        doc.text('Olá :)  segue abaixo o relatório dos dados :', 10, 10)
-        doc.setFontSize(18)
-        doc.text('', 10, 10)
+        doc.text("Olá " + userName + ":)  segue abaixo o relatório dos dados:", 10, 10)
 
         // Adiciona o conteúdo do resultado
         doc.setFontSize(12)
@@ -86,7 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const splitText = doc.splitTextToSize(allText, 180) // Ajuste o tamanho conforme necessário
         doc.text(splitText, 10, 20)
 
+        // Adiciona a data atual ao nome do arquivo
+        const date = new Date()
+        const formattedDate = `${date.getFullYear()}-${('0' + (date.getMonth() + 1)).slice(-2)}-${('0' + date.getDate()).slice(-2)}`
+        const fileName = `relatorio_gastos_${formattedDate}.pdf`
+
         // Salva o PDF
-        doc.save('relatorio_gastos.pdf')
+        doc.save(fileName)
     })
 })
