@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo ao Sistema Organizacional</title>
@@ -12,15 +13,35 @@
         <h1> ao </h1>
         <h1> Sistema Organizacional</h1>
 
-
         <p>Gerencie suas finanças de forma fácil e eficaz.</p>
+       
+        <p id="aviso">( Preencha CORRETAMENTE os campos abaixo, para uma melhor experiência com o software )</p>
+        <form id="homeForm">
+            <input type="text" id="inName" placeholder="INSIRA SEU NOME" required>
+            <input type="date" id="inDate"><br>
+           
+        </form>
+        
         <a href="index.html">
-            <button id="start-button">Iniciar</button>
+            <button id="saveNameButton">Iniciar</button>
         </a>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const saveNameButton = document.getElementById("saveNameButton");
+            const inName = document.getElementById("inName");
+            
+            saveNameButton.addEventListener("click", () => {
+                // Salva o nome no localStorage
+                localStorage.setItem("userName", inName.value);
+            });
+        });
+</script>
     </div>
     <footer>
         <p>By Filipe Mateus &copy; </p>
         <p>2024 v2.0</p>
     </footer>
+
+    <script src="scriptHome.js"></script>
 </body>
 </html>
