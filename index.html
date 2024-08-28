@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Organizacional</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
-
 <body>
     <h2>SISTEMA ORGANIZACIONAL</h2>
 
@@ -20,9 +18,6 @@
         <p>Insira o Saldo: (apenas uma vez)</p>
         <input type="number" id="invt" required placeholder="Ex.: 3000">
         <input type="submit" value="Adicionar">
-        
-
-
     </form>
 
     <pre id="output"></pre>
@@ -31,13 +26,13 @@
     <h3 id="dif"></h3>
     <button id="copyAllButton">Copiar Tudo</button>
     <button id="generatePDF">Gerar PDF</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<footer>
-    <p>By Filipe Mateus &copy; </p>
-    <p>2024 v2.0</p>
-</footer>
+    <footer>
+        <p>By Filipe Mateus &copy; </p>
+        <p>2024 v2.0</p>
+    </footer>
 </body>
-
 </html>
