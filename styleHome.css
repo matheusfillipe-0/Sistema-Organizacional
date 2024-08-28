@@ -1,9 +1,8 @@
-
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #4CAF50;
     color: #333;
     margin: 0;
@@ -12,7 +11,6 @@ body {
     justify-content: space-between;
 }
 
-
 #start-container {
     text-align: center;
     margin-top: 20vh;
@@ -20,19 +18,50 @@ body {
 }
 
 h1 {
+    font-family: 'Poppins', sans-serif;
     font-size: 2.2em;
     color: #ffffff;
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 1.2em;
-    color: #ffffff;
-    padding: 0 30px;
-    margin-bottom: 40px;
+#aviso {
+    margin: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
 }
 
-#start-button {
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+    color: #ffffff;
+    padding: 0 30px;
+}
+
+#inName,
+#inDate {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    margin-top: 10px;
+    width: calc(100% - 22px);
+    max-width: 400px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#inDate {
+    color: #555;
+}
+
+#inDate::-webkit-calendar-picker-indicator {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#saveNameButton {
     background-color: #000000;
     color: white;
     padding: 10px 40px;
@@ -41,81 +70,12 @@ p {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
+    margin: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
-#start-button:hover {
+#saveNameButton:hover {
     background-color: #45a049;
-}
-
-h2 {
-    margin: 20px 0;
-    color: #4CAF50;
-}
-
-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-form p {
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="number"] {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="submit"],
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-input[type="submit"]:hover,
-button:hover {
-    background-color: #45a049;
-}
-
-pre {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    width: 100%;
-    max-width: 400px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    text-align: left;
-}
-
-h3 {
-    margin: 10px 0;
-    color: #4CAF50;
-    font-weight: normal;
-}
-
-#copyAllButton {
-    margin: 20px;
 }
 
 footer {
@@ -125,6 +85,7 @@ footer {
     text-align: center;
     width: 100%;
     margin-top: auto; 
+    font-family: 'Roboto', sans-serif;
 }
 
 footer p {
@@ -147,16 +108,6 @@ footer p {
         font-size: 16px;
     }
 
-    form {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    pre, 
-    h3 {
-        font-size: 0.9em;
-    }
-
     footer {
         font-size: 0.8em;
     }
@@ -175,16 +126,6 @@ footer p {
     #start-button {
         padding: 10px 20px;
         font-size: 14px;
-    }
-
-    form {
-        margin: 5px;
-        padding: 10px;
-    }
-
-    pre, 
-    h3 {
-        font-size: 0.8em;
     }
 
     footer {
