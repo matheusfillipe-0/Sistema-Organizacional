@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Organizacional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+
+<body>
+    <h2>SISTEMA ORGANIZACIONAL</h2>
+
+    <form id="mainForm">
+        <p>Descrição:</p>
+        <input type="text" id="innome" required placeholder="Ex.: MERCADO">
+        <p>Valor a pagar:</p>
+        <input type="text" id="inValor" required placeholder="Ex.: 400 R$">
+        <p>Insira o Saldo: (apenas uma vez)</p>
+        <input type="number" id="invt" required placeholder="Ex.: 3000">
+        <input type="submit" value="Adicionar">
+        <button id="generatePDF">Gerar PDF</button>
+
+
+    </form>
+
+    <pre id="output"></pre>
+    <h3 id="total"></h3>
+    <h3 id="percentual"></h3>
+    <h3 id="dif"></h3>
+    <button id="copyAllButton">Copiar Tudo</button>
+
+    <script src="script.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<footer>
+    <p>By Filipe Mateus &copy; </p>
+    <p>2024 v2.0</p>
+</footer>
+</body>
+
+</html>
