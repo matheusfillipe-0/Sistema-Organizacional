@@ -15,7 +15,10 @@
             display: flex;
             text-align: center;
             margin: 50px;
-            color: #ffffff;
+            color: #dedede;
+        }
+        p{
+            color: #dedede;
         }
 
         form {
@@ -46,22 +49,23 @@
 
         input[type="submit"],
         button {
-            background-color: #333;
-            color: #dedede;
+            background-color: #1f1f1f;
+            color: #ffffff;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 10px;
+            margin-top: 40px;
         }
 
         input[type="submit"]:hover,
         button:hover {
-            background-color: #000000;
+            background-color: #343434;
         }
 
         pre {
+            display: none;
             background: #fff;
             padding: 15px;
             border-radius: 8px;
