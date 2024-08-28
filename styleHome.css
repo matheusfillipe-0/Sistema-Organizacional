@@ -15,6 +15,7 @@ body {
     text-align: center;
     margin-top: 20vh;
     padding: 0 20px; 
+    box-sizing: border-box;
 }
 
 h1 {
@@ -25,9 +26,10 @@ h1 {
 }
 
 #aviso {
-    margin: 60px;
+    margin: 60px auto;
     font-family: 'Roboto', sans-serif;
     font-size: 0.8em;
+    max-width: 600px;
 }
 
 p {
@@ -35,6 +37,7 @@ p {
     font-size: 1.4em;
     color: #ffffff;
     padding: 0 30px;
+    max-width: 600px;
 }
 
 #inName,
@@ -70,7 +73,7 @@ p {
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    margin: 50px;
+    margin-top: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -103,7 +106,7 @@ footer p {
         margin-bottom: 20px;
     }
 
-    #start-button {
+    #saveNameButton {
         padding: 10px 30px;
         font-size: 16px;
     }
@@ -123,7 +126,7 @@ footer p {
         margin-bottom: 15px;
     }
 
-    #start-button {
+    #saveNameButton {
         padding: 10px 20px;
         font-size: 14px;
     }
