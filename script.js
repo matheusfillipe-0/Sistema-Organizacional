@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const copyAllButton = document.getElementById("copyAllButton")
     const pdfButton = document.getElementById("generatePDF")
     const userName = localStorage.getItem("userName")
+    
+    // Preencher a data atual no campo de data
+    const dateInput = document.getElementById("inDate")
+    const today = new Date().toISOString().split('T')[0]
+    dateInput.value = today
 
     let desc = []
     let val = []
