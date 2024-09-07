@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const copyAllButton = document.getElementById("copyAllButton")
     const pdfButton = document.getElementById("generatePDF")
     const userName = localStorage.getItem("userName")
-    
-    // Removido o código que preenche a data automaticamente
-    
+
     let desc = []
     let val = []
 
@@ -87,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const allText = `${preText}\n${totalText}\n${percentualText}\n${difText}`
         
         // Adiciona o conteúdo no PDF
-        const splitText = doc.splitTextToSize(allText, 180)
+        const splitText = doc.splitTextToSize(allText, 180) // Ajuste o tamanho conforme necessário
         doc.text(splitText, 10, 20)
 
         // Adiciona a data atual ao nome do arquivo
