@@ -4,44 +4,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Sistema Organizacional</title>
-    <link rel="stylesheet" href="styleHome.css">
+    <title>Sistema Organizacional</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="start-container">
-        <h1>Seja Bem-vindo</h1>
-        <h1> ao </h1>
-        <h1> Sistema Organizacional</h1>
+    <h2>SISTEMA ORGANIZACIONAL</h2>
 
-        <p>Gerencie suas finanças de forma fácil e eficaz.</p>
-       
-        <p id="aviso">( Preencha CORRETAMENTE os campos abaixo, para uma melhor experiência com o software )</p>
-        <form id="homeForm">
-            <input type="text" id="inName" placeholder="INSIRA SEU NOME (opcional)" required>
-            <input type="date" id="inDate"><br>
-           
-        </form>
-        
-        <a href="index.html">
-            <button id="saveNameButton">Iniciar</button>
-        </a>
-        <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const saveNameButton = document.getElementById("saveNameButton");
-            const inName = document.getElementById("inName");
-            
-            saveNameButton.addEventListener("click", () => {
-                // Salva o nome no localStorage
-                localStorage.setItem("userName", inName.value);
-            });
-        });
-</script>
-    </div>
+    <form id="mainForm">
+        <p>Descrição:</p>
+        <input type="text" id="innome" required placeholder="Ex.: MERCADO">
+        <p>Valor a pagar:</p>
+        <input type="text" id="inValor" required placeholder="Ex.: 400 R$">
+        <p>Insira o Saldo: (apenas uma vez)</p>
+        <input type="number" id="invt" required placeholder="Ex.: 3000">
+        <input type="submit" value="Adicionar">
+    </form>
+
+    <pre id="output"></pre>
+    <h3 id="total"></h3>
+    <h3 id="percentual"></h3>
+    <h3 id="dif"></h3>
+    <button id="copyAllButton">Copiar Tudo</button>
+    <button id="generatePDF">Gerar PDF</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    
     <footer>
         <p>By Filipe Mateus &copy; </p>
         <p>2024 v2.0</p>
     </footer>
-
-    <script src="scriptHome.js"></script>
 </body>
 </html>
