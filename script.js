@@ -8,11 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pdfButton = document.getElementById("generatePDF")
     const userName = localStorage.getItem("userName")
     
-    // Preencher a data atual no campo de data
-    const dateInput = document.getElementById("inDate")
-    const today = new Date().toISOString().split('T')[0]
-    dateInput.value = today
-
+    // Removido o código que preenche a data automaticamente
+    
     let desc = []
     let val = []
 
@@ -90,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const allText = `${preText}\n${totalText}\n${percentualText}\n${difText}`
         
         // Adiciona o conteúdo no PDF
-        const splitText = doc.splitTextToSize(allText, 180) // Ajuste o tamanho conforme necessário
+        const splitText = doc.splitTextToSize(allText, 180)
         doc.text(splitText, 10, 20)
 
         // Adiciona a data atual ao nome do arquivo
